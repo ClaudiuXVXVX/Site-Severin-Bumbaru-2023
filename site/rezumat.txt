@@ -1,0 +1,4 @@
+	In acest website veti gasi o pagina home.html in care aveti un navbar lateral pentru toate paginile create de noi si 2 butoane in centrul ecranului.
+	Primul buton va va trimite la o sectiune in care veti avea o lista de 12 locuri de vizitat in romania, fiecare cu pagina lui in care se gaseste si o harta atasata locatiei respective.
+	Al doilea buton va va trimite la o sectiune de completat cu data de plecare, orasul de start si de final, dupa care in urma apasarii butonului confirm veti fi trimis catre o alta pagina cu trenul respectiv.
+	Am folosit html, css si js pentru realizarea acestui site. Am utilizat atat ChatGPT, vechi site-uri de ale noastre cat si tutoriale, insa adaptate pentru acest website RO2023.

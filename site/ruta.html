@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>City Data</title>
+    <link rel="stylesheet" type="text/css" href="css/ruta.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+
+            <i class='bx bxs-train icon'></i>
+            <div class="logo_name">RO23</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="home.html">
+                    <i class='bx bx-home'></i>
+                    <span class="links_name">Acasa</span>
+                </a>
+                <span class="tooltip">Acasa</span>
+            </li>
+            <li>
+                <a href="trenuri.html">
+                    <i class='bx bx-sitemap'></i>
+                    <span class="links_name">Plecari</span>
+                </a>
+                <span class="tooltip">Plecari</span>
+            </li>
+            <li>
+                <a href="package.html">
+                    <i class='bx bx-detail'></i>
+                    <span class="links_name">Detali</span>
+                </a>
+                <span class="tooltip">Detali</span>
+            </li>
+
+
+        </ul>
+    </div>
+    <section class="home-section">
+        <br>
+        <div class="container">
+            <h1>Detalii Tren</h1>
+            <div class="departure">
+                <h2>Plecare</h2>
+                <p class="info">Orasul: <span id="starting-city">StartingCity</span></p>
+                <p class="info">Data si ora: <span>14 aprilie, 10:30</span></p>
+            </div>
+            <div class="arrival">
+                <h2>Sosire</h2>
+                <p class="info">Orasul: <span id="ending-city">EndingCity</span></p>
+                <p class="info">Data si ora: <span>14 aprilie, 17:15</span></p>
+            </div>
+            <div class="details-station">
+                <button id="details-station-btn" onclick="toggleDetails('details-station')">Detalii Statii</button>
+                <div class="details-content" id="details-station-content" style="display:none">
+                    <h2>Statii</h2>
+                    <ul>
+                        <li id="starting-city2">StartingCity</li>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                        <li id="ending-city2">EndingCity</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="details-price">
+                <button id="details-price-btn" onclick="toggleDetails('details-price')">Detalii Pret</button>
+                <div class="details-content" id="details-price-content" style="display:none">
+                    <h2>Pret</h2>
+                    <p>Standard: <span>120 RON</span></p>
+                    <p>Business: <span>220 RON</span></p>
+                    <p>First Class: <span>300 RON</span></p>
+                </div>
+            </div>
+        </div>
+        <script>
+            function toggleDetails(id) {
+                const detailsContent = document.getElementById(`${id}-content`);
+                const detailsBtn = document.getElementById(`${id}-btn`);
+                if (detailsContent.style.display === "none") {
+                    detailsContent.style.display = "block";
+                    detailsBtn.innerHTML = "Ascunde Detalii";
+                } else {
+                    detailsContent.style.display = "none";
+                    detailsBtn.innerHTML = `Detalii ${id === "details-station" ? "Statii" : "Pret"}`;
+                }
+            }
+        </script>
+    </section>
+
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+        let searchBtn = document.querySelector(".bx-search");
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            menuBtnChange();//calling the function(optional)
+        });
+
+        searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
+            sidebar.classList.toggle("open");
+            menuBtnChange(); //calling the function(optional)
+        });
+
+        // following are the code to change sidebar button(optional)
+        function menuBtnChange() {
+            if (sidebar.classList.contains("open")) {
+                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+            } else {
+                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
+            }
+        }
+    </script>
+    <script>
+        // Read the value of the "route" parameter from the URL
+        var urlParams = new URLSearchParams(window.location.search);
+        var route = urlParams.get('route');
+
+        // Split the route into starting and ending cities
+        var cities = route.split(' to ');
+        var cities2 = route.split(' to ');
+
+        // Replace the placeholder text with the actual starting and ending cities
+        var startingCityElement = document.getElementById('starting-city');
+        startingCityElement.innerText = cities[0];
+        var endingCityElement = document.getElementById('ending-city');
+        endingCityElement.innerText = cities[1];
+        var startingCityElement2 = document.getElementById('starting-city2');
+        startingCityElement2.innerText = cities2[0];
+        var endingCityElement2 = document.getElementById('ending-city2');
+        endingCityElement2.innerText = cities2[1];
+    </script>
+
+</body>
+
+</html>

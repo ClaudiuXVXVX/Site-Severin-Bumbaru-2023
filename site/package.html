@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Transport RO23</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+
+            <i class='bx bxs-train icon'></i>
+            <div class="logo_name">RO23</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="home.html">
+                    <i class='bx bx-home'></i>
+                    <span class="links_name">Acasa</span>
+                </a>
+                <span class="tooltip">Acasa</span>
+            </li>
+            <li>
+                <a href="trenuri.html">
+                    <i class='bx bx-sitemap'></i>
+                    <span class="links_name">Plecari</span>
+                </a>
+                <span class="tooltip">Plecari</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-detail'></i>
+                    <span class="links_name">Detali</span>
+                </a>
+                <span class="tooltip">Detalii</span>
+            </li>
+
+
+        </ul>
+    </div>
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+        let searchBtn = document.querySelector(".bx-search");
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            menuBtnChange();
+        });
+
+        searchBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            menuBtnChange();
+        });
+
+        function menuBtnChange() {
+            if (sidebar.classList.contains("open")) {
+                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+            } else {
+                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+            }
+        }
+    </script>
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <section class="packages">
+        <h1 class="heading-title">CELE MAI POPULARE</h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="images/img-1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Borsa - Cascada Cailor</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit rutrum semper. Nulla sit
+                        amet nisl non magna cursus ultrices eget eu nibh. Maecenas a sem at lorem venenatis luctus id
+                        non metus. Nullam quam diam, ornare in diam ut, aliquam mattis magna. Etiam facilisis viverra
+                        posuere. Ut tincidunt, eros ut ornare rutrum, lacus lacus lobortis nisl, pulvinar finibus mi
+                        lacus non nunc. Nullam aliquam malesuada hendrerit.</p>
+                    <a href="locuri/a1.html" class="btn">Mai Multe Informatii</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/img-2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Bran - Castelul Bran</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit rutrum semper. Nulla sit
+                        amet nisl non magna cursus ultrices eget eu nibh. Maecenas a sem at lorem venenatis luctus id
+                        non metus. Nullam quam diam, ornare in diam ut, aliquam mattis magna. Etiam facilisis viverra
+                        posuere. Ut tincidunt, eros ut ornare rutrum, lacus lacus lobortis nisl, pulvinar finibus mi
+                        lacus non nunc. Nullam aliquam malesuada hendrerit.</p>
+                    <a href="locuri/a2.html" class="btn">Mai Multe Informatii</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/img-3.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Brasov - Piata Sfatului</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit rutrum semper. Nulla sit
+                        amet nisl non magna cursus ultrices eget eu nibh. Maecenas a sem at lorem venenatis luctus id
+                        non metus. Nullam quam diam, ornare in diam ut, aliquam mattis magna. Etiam facilisis viverra
+                        posuere. Ut tincidunt, eros ut ornare rutrum, lacus lacus lobortis nisl, pulvinar finibus mi
+                        lacus non nunc. Nullam aliquam malesuada hendrerit.</p>
+                    <a href="locuri/a3.html" class="btn">Mai Multe Informatii</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/img-4.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Bucuresti - Parcul Herastrau</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit rutrum semper. Nulla sit
+                        amet nisl non magna cursus ultrices eget eu nibh. Maecenas a sem at lorem venenatis luctus id
+                        non metus. Nullam quam diam, ornare in diam ut, aliquam mattis magna. Etiam facilisis viverra
+                        posuere. Ut tincidunt, eros ut ornare rutrum, lacus lacus lobortis nisl, pulvinar finibus mi
+                        lacus non nunc.</p>
+                    <a href="locuri/a4.html" class="btn">Mai Multe Informatii</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/img-5.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Busteni - Castelul Cantacuzino</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit rutrum semper. Nulla sit
+                        amet nisl non magna cursus ultrices eget eu nibh. Maecenas a sem at lorem venenatis luctus id
+                        non metus. Nullam quam diam, ornare in diam ut, aliquam mattis magna. Etiam facilisis viverra
+                        posuere. Ut tincidunt, eros ut ornare rutrum, lacus lacus lobortis nisl, pulvinar finibus mi
+                        lacus non nunc.</p>
+                    <a href="locuri/a5.html" class="btn">Mai Multe Informatii</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/img-6.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Galati - Faleza Galati</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit rutrum semper. Nulla sit
+                        amet nisl non magna cursus ultrices eget eu nibh. Maecenas a sem at lorem venenatis luctus id
+                        non metus. Nullam quam diam, ornare in diam ut, aliquam mattis magna. Etiam facilisis viverra
+                        posuere. Ut tincidunt, eros ut ornare rutrum, lacus lacus lobortis nisl, pulvinar finibus mi
+                        lacus non nunc. Nullam aliquam malesuada hendrerit.</p>
+                    <a href="locuri/a6.html" class="btn">Mai Multe Informatii</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/img-7.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Gura Humorului - Manastirea Voronet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit rutrum semper. Nulla sit
+                        amet nisl non magna cursus ultrices eget eu nibh. Maecenas a sem at lorem venenatis luctus id
+                        non metus. Nullam quam diam, ornare in diam ut, aliquam mattis magna. Etiam facilisis viverra
+                        posuere. Ut tincidunt, eros ut ornare rutrum, lacus lacus lobortis nisl, pulvinar finibus mi
+                        lacus non nunc.</p>
+                    <a href="locuri/a7.html" class="btn">Mai Multe Informatii</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/img-8.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Hunedoara - Castelul Corvinilor</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit rutrum semper. Nulla sit
+                        amet nisl non magna cursus ultrices eget eu nibh. Maecenas a sem at lorem venenatis luctus id
+                        non metus. Nullam quam diam, ornare in diam ut, aliquam mattis magna. Etiam facilisis viverra
+                        posuere. Ut tincidunt, eros ut ornare rutrum, lacus lacus lobortis nisl, pulvinar finibus mi
+                        lacus non nunc.</p>
+                    <a href="locuri/a8.html" class="btn">Mai Multe Informatii</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/img-9.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Oradea - Piata Unirii</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit rutrum semper. Nulla sit
+                        amet nisl non magna cursus ultrices eget eu nibh. Maecenas a sem at lorem venenatis luctus id
+                        non metus. Nullam quam diam, ornare in diam ut, aliquam mattis magna. Etiam facilisis viverra
+                        posuere. Ut tincidunt, eros ut ornare rutrum, lacus lacus lobortis nisl, pulvinar finibus mi
+                        lacus non nunc. Nullam aliquam malesuada hendrerit.</p>
+                    <a href="locuri/a9.html" class="btn">Mai Multe Informatii</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/img-10.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Sapanta - Cimitirul Vesel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit rutrum semper. Nulla sit
+                        amet nisl non magna cursus ultrices eget eu nibh. Maecenas a sem at lorem venenatis luctus id
+                        non metus. Nullam quam diam, ornare in diam ut, aliquam mattis magna. Etiam facilisis viverra
+                        posuere. Ut tincidunt, eros ut ornare rutrum, lacus lacus lobortis nisl, pulvinar finibus mi
+                        lacus non nunc. Nullam aliquam malesuada hendrerit.</p>
+                    <a href="locuri/a10.html" class="btn">Mai Multe Informatii</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/img-11.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Sinaia - Castelul Peles</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit rutrum semper. Nulla sit
+                        amet nisl non magna cursus ultrices eget eu nibh. Maecenas a sem at lorem venenatis luctus id
+                        non metus. Nullam quam diam, ornare in diam ut, aliquam mattis magna. Etiam facilisis viverra
+                        posuere. Ut tincidunt, eros ut ornare rutrum, lacus lacus lobortis nisl, pulvinar finibus mi
+                        lacus non nunc. Nullam aliquam malesuada hendrerit.</p>
+                    <a href="locuri/a11.html" class="btn">Mai Multe Informatii</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/img-12.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Turda - Salina Turda</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit rutrum semper. Nulla sit
+                        amet nisl non magna cursus ultrices eget eu nibh. Maecenas a sem at lorem venenatis luctus id
+                        non metus. Nullam quam diam, ornare in diam ut, aliquam mattis magna. Etiam facilisis viverra
+                        posuere. Ut tincidunt, eros ut ornare rutrum, lacus lacus lobortis nisl, pulvinar finibus mi
+                        lacus non nunc. Nullam aliquam malesuada hendrerit.</p>
+                    <a href="locuri/a12.html" class="btn">Mai Multe Informatii</a>
+                </div>
+            </div>
+        </div>
+        <div class="load-more"><span class="btn">mai multe</span></div>
+    </section>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
